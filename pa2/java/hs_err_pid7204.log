@@ -1,0 +1,253 @@
+#
+# An unexpected error has been detected by Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f50d7c4906b, pid=7204, tid=139985197217568
+#
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (1.6.0-b105 mixed mode)
+# Problematic frame:
+# C  [libpthread.so.0+0x806b]  pthread_join+0x10b
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+siginfo:si_signo=11, si_errno=0, si_code=0, si_addr=0x0000000000003223
+
+Registers:
+RAX=0x00000000000000ca, RBX=0x00007f50d6b40700, RCX=0xffffffffffffffff, RDX=0x0000000000001c25
+RSP=0x00007fff5e52a410, RBP=0x00007fff5e52a470, RSI=0x0000000000000000, RDI=0x00007f50d6b409d0
+R8 =0x0000000000000000, R9 =0x00007f50d6b40700, R10=0x0000000000000000, R11=0x0000000000000246
+R12=0x00007f50d6b40d28, R13=0x00007f50d7f43720, R14=0x0000000000000000, R15=0x0000000000000000
+RIP=0x00007f50d7c4906b, EFL=0x0000000000000246, CSGSFS=0x0000000000000033, ERR=0x0000000000000000
+  TRAPNO=0x0000000000000000
+
+Top of Stack: (sp=0x00007fff5e52a410)
+0x00007fff5e52a410:   0000000040002000 00007f50d7e73795
+0x00007fff5e52a420:   00007f50d7c48f40 00007f50d6b40d28
+0x00007fff5e52a430:   00007f50d6b409d0 0000000000000000
+0x00007fff5e52a440:   00007f50d6b40700 0000000000100000
+0x00007fff5e52a450:   00007fff5e52a480 00007fff5e52a530
+0x00007fff5e52a460:   0000000040002000 000000004000589c
+0x00007fff5e52a470:   00007fff5e52c6b0 00007f50d6b40700
+0x00007fff5e52a480:   0000000000000000 0000000000000000
+0x00007fff5e52a490:   0000000000001000 0000000000000000
+0x00007fff5e52a4a0:   0000000000100000 0000000000000000
+0x00007fff5e52a4b0:   0000000000000000 00000000400046be
+0x00007fff5e52a4c0:   00007fff5e52a4e0 0000000040108e70
+0x00007fff5e52a4d0:   0000000000000000 0000000040001bd0
+0x00007fff5e52a4e0:   00007fff5e52c6b0 0000000040001ee9
+0x00007fff5e52a4f0:   0000000041ea4010 0000000000000000
+0x00007fff5e52a500:   0000000000000000 0000000000000000
+0x00007fff5e52a510:   00007fff5e52c9e2 0000000800000001
+0x00007fff5e52a520:   0000000041ea41b8 0000000000000000
+0x00007fff5e52a530:   0000000000000008 0000000041ea41b8
+0x00007fff5e52a540:   0000000000000000 00007fff5e52c9e2
+0x00007fff5e52a550:   00007f50d70e6620 00007f50d70e65c0
+0x00007fff5e52a560:   0000000000010002 0000000000000000
+0x00007fff5e52a570:   0000000000000000 0000000000100000
+0x00007fff5e52a580:   0000000000000000 0000000000000000
+0x00007fff5e52a590:   0000000000000000 0000000000000000
+0x00007fff5e52a5a0:   0000000000000000 0000000000000000
+0x00007fff5e52a5b0:   0000000000000000 0000000000000000
+0x00007fff5e52a5c0:   2e72692f7366612f 64726f666e617473
+0x00007fff5e52a5d0:   7379732f7564652e 646d612f736d6574
+0x00007fff5e52a5e0:   78756e696c5f3436 77736275702f3632
+0x00007fff5e52a5f0:   6567616b6361702f 676175676e614c2f
+0x00007fff5e52a600:   362d6b646a2f7365 6c5f3436646d612f 
+
+Instructions: (pc=0x00007f50d7c4906b)
+0x00007f50d7c4905b:   d0 02 00 00 31 f6 4d 31 d2 48 c7 c0 ca 00 00 00
+0x00007f50d7c4906b:   0f 05 83 3f 00 75 f2 eb 8f 0f 1f 40 00 f6 83 08 
+
+Stack: [0x00007fff5e42d000,0x00007fff5e52d000),  sp=0x00007fff5e52a410,  free space=1013k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libpthread.so.0+0x806b]  pthread_join+0x10b
+C  0x00007f50d6b40700
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000041f76c00 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=7212]
+  0x0000000041f74c00 JavaThread "CompilerThread1" daemon [_thread_blocked, id=7211]
+  0x0000000041f73400 JavaThread "CompilerThread0" daemon [_thread_blocked, id=7210]
+  0x0000000041f71c00 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=7209]
+  0x0000000041f4f400 JavaThread "Finalizer" daemon [_thread_blocked, id=7208]
+  0x0000000041f4e800 JavaThread "Reference Handler" daemon [_thread_blocked, id=7207]
+  0x0000000041eab800 JavaThread "main" [_thread_blocked, id=7205]
+
+Other Threads:
+  0x0000000041f49c00 VMThread [id=7206]
+  0x0000000041f79000 WatcherThread [id=7213]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000000041ea9fd0/0x0000000041eaa020] Threads_lock - owner thread: 0x0000000041f49c00
+[0x0000000041eaa770/0x0000000041eaa7a0] Heap_lock - owner thread: 0x0000000041eab800
+
+Heap
+ def new generation   total 797952K, used 88639K [0x00007f5012500000, 0x00007f50486d0000, 0x00007f5050d00000)
+  eden space 709312K,   0% used [0x00007f5012500000, 0x00007f5012500000, 0x00007f503d9b0000)
+  from space 88640K,  99% used [0x00007f503d9b0000, 0x00007f504303fff8, 0x00007f5043040000)
+  to   space 88640K,   0% used [0x00007f5043040000, 0x00007f5043040000, 0x00007f50486d0000)
+ tenured generation   total 1826676K, used 1826549K [0x00007f5050d00000, 0x00007f50c04dd000, 0x00007f50cdd00000)
+   the space 1826676K,  99% used [0x00007f5050d00000, 0x00007f50c04bd488, 0x00007f5091bee400, 0x00007f50c04dd000)
+ compacting perm gen  total 21248K, used 3407K [0x00007f50cdd00000, 0x00007f50cf1c0000, 0x00007f50d3100000)
+   the space 21248K,  16% used [0x00007f50cdd00000, 0x00007f50ce053ca0, 0x00007f50ce053e00, 0x00007f50cf1c0000)
+No shared spaces configured.
+
+Dynamic libraries:
+40000000-40009000 r-xp 00000000 00:13 1944151332                         /afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/bin/java
+40108000-4010a000 rwxp 00008000 00:13 1944151332                         /afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/bin/java
+41ea4000-42565000 rwxp 00000000 00:00 0                                  [heap]
+7f500c000000-7f500d0cb000 rwxp 00000000 00:00 0 
+7f500d0cb000-7f5010000000 ---p 00000000 00:00 0 
+7f501115e000-7f501115f000 ---p 00000000 00:00 0 
+7f501115f000-7f501125f000 rwxp 00000000 00:00 0 
+7f501125f000-7f5011262000 ---p 00000000 00:00 0 
+7f5011262000-7f5011360000 rwxp 00000000 00:00 0 
+7f5011360000-7f5011363000 ---p 00000000 00:00 0 
+7f5011363000-7f5011461000 rwxp 00000000 00:00 0 
+7f5011461000-7f5011464000 ---p 00000000 00:00 0 
+7f5011464000-7f5011562000 rwxp 00000000 00:00 0 
+7f5011562000-7f5011565000 ---p 00000000 00:00 0 
+7f5011565000-7f5011663000 rwxp 00000000 00:00 0 
+7f5011663000-7f5011666000 ---p 00000000 00:00 0 
+7f5011666000-7f5011764000 rwxp 00000000 00:00 0 
+7f5011764000-7f5011767000 ---p 00000000 00:00 0 
+7f5011767000-7f5011865000 rwxp 00000000 00:00 0 
+7f5011865000-7f5011866000 ---p 00000000 00:00 0 
+7f5011866000-7f5011996000 rwxp 00000000 00:00 0 
+7f5011996000-7f5011b10000 r-xs 02c68000 00:13 1944160510                 /afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/jre/lib/rt.jar
+7f5011b10000-7f5011e8c000 rwxp 00000000 00:00 0 
+7f5011e8c000-7f5011ef9000 rwxp 00000000 00:00 0 
+7f5011ef9000-7f50120aa000 rwxp 00000000 00:00 0 
+7f50120aa000-7f50120ed000 rwxp 00000000 00:00 0 
+7f50120ed000-7f5012469000 rwxp 00000000 00:00 0 
+7f5012469000-7f50124d5000 rwxp 00000000 00:00 0 
+7f50124d5000-7f50124e0000 rwxp 00000000 00:00 0 
+7f50124e0000-7f50124ff000 rwxp 00000000 00:00 0 
+7f50124ff000-7f50486d0000 rwxp 00000000 00:00 0 
+7f50486d0000-7f5050d00000 rwxp 00000000 00:00 0 
+7f5050d00000-7f50c04dd000 rwxp 00000000 00:00 0 
+7f50c04dd000-7f50cdd00000 rwxp 00000000 00:00 0 
+7f50cdd00000-7f50cf1c0000 rwxp 00000000 00:00 0 
+7f50cf1c0000-7f50d3100000 rwxp 00000000 00:00 0 
+7f50d3101000-7f50d310b000 rwxp 00000000 00:00 0 
+7f50d310b000-7f50d31c1000 rwxp 00000000 00:00 0 
+7f50d31c1000-7f50d3431000 rwxp 00000000 00:00 0 
+7f50d3431000-7f50d61c1000 rwxp 00000000 00:00 0 
+7f50d61c1000-7f50d61cf000 r-xp 00000000 00:13 1944153400                 /afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/jre/lib/amd64/libzip.so
+7f50d61cf000-7f50d62d1000 ---p 0000e000 00:13 1944153400                 /afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/jre/lib/amd64/libzip.so
+7f50d62d1000-7f50d62d4000 rwxp 00010000 00:13 1944153400                 /afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/jre/lib/amd64/libzip.so
+7f50d62d4000-7f50d62d5000 rwxp 00000000 00:00 0 
+7f50d62d5000-7f50d62fd000 r-xp 00000000 00:13 1944153478                 /afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/jre/lib/amd64/libjava.so
+7f50d62fd000-7f50d63fd000 ---p 00028000 00:13 1944153478                 /afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/jre/lib/amd64/libjava.so
+7f50d63fd000-7f50d6404000 rwxp 00028000 00:13 1944153478                 /afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/jre/lib/amd64/libjava.so
+7f50d6404000-7f50d6411000 r-xp 00000000 00:13 1944153366                 /afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/jre/lib/amd64/libverify.so
+7f50d6411000-7f50d6510000 ---p 0000d000 00:13 1944153366                 /afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/jre/lib/amd64/libverify.so
+7f50d6510000-7f50d6513000 rwxp 0000c000 00:13 1944153366                 /afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/jre/lib/amd64/libverify.so
+7f50d6513000-7f50d652a000 r-xp 00000000 08:01 1081648                    /lib/x86_64-linux-gnu/libnsl-2.13.so
+7f50d652a000-7f50d6729000 ---p 00017000 08:01 1081648                    /lib/x86_64-linux-gnu/libnsl-2.13.so
+7f50d6729000-7f50d672a000 r-xp 00016000 08:01 1081648                    /lib/x86_64-linux-gnu/libnsl-2.13.so
+7f50d672a000-7f50d672b000 rwxp 00017000 08:01 1081648                    /lib/x86_64-linux-gnu/libnsl-2.13.so
+7f50d672b000-7f50d672d000 rwxp 00000000 00:00 0 
+7f50d672d000-7f50d6734000 r-xp 00000000 00:13 1944153406                 /afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/jre/lib/amd64/native_threads/libhpi.so
+7f50d6734000-7f50d6835000 ---p 00007000 00:13 1944153406                 /afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/jre/lib/amd64/native_threads/libhpi.so
+7f50d6835000-7f50d6837000 rwxp 00008000 00:13 1944153406                 /afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/jre/lib/amd64/native_threads/libhpi.so
+7f50d6837000-7f50d6838000 rwxp 00000000 00:00 0 
+7f50d6838000-7f50d683f000 r-xp 00000000 08:01 1081590                    /lib/x86_64-linux-gnu/librt-2.13.so
+7f50d683f000-7f50d6a3e000 ---p 00007000 08:01 1081590                    /lib/x86_64-linux-gnu/librt-2.13.so
+7f50d6a3e000-7f50d6a3f000 r-xp 00006000 08:01 1081590                    /lib/x86_64-linux-gnu/librt-2.13.so
+7f50d6a3f000-7f50d6a40000 rwxp 00007000 08:01 1081590                    /lib/x86_64-linux-gnu/librt-2.13.so
+7f50d6a40000-7f50d6a43000 ---p 00000000 00:00 0 
+7f50d6a43000-7f50d6b41000 rwxp 00000000 00:00 0 
+7f50d6b41000-7f50d6bc5000 r-xp 00000000 08:01 1081664                    /lib/x86_64-linux-gnu/libm-2.13.so
+7f50d6bc5000-7f50d6dc4000 ---p 00084000 08:01 1081664                    /lib/x86_64-linux-gnu/libm-2.13.so
+7f50d6dc4000-7f50d6dc5000 r-xp 00083000 08:01 1081664                    /lib/x86_64-linux-gnu/libm-2.13.so
+7f50d6dc5000-7f50d6dc6000 rwxp 00084000 08:01 1081664                    /lib/x86_64-linux-gnu/libm-2.13.so
+7f50d6dc6000-7f50d7440000 r-xp 00000000 00:13 1944153514                 /afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/jre/lib/amd64/server/libjvm.so
+7f50d7440000-7f50d7542000 ---p 0067a000 00:13 1944153514                 /afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/jre/lib/amd64/server/libjvm.so
+7f50d7542000-7f50d766e000 rwxp 0067c000 00:13 1944153514                 /afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/jre/lib/amd64/server/libjvm.so
+7f50d766e000-7f50d76a9000 rwxp 00000000 00:00 0 
+7f50d76a9000-7f50d7833000 r-xp 00000000 08:01 1081601                    /lib/x86_64-linux-gnu/libc-2.13.so
+7f50d7833000-7f50d7a32000 ---p 0018a000 08:01 1081601                    /lib/x86_64-linux-gnu/libc-2.13.so
+7f50d7a32000-7f50d7a36000 r-xp 00189000 08:01 1081601                    /lib/x86_64-linux-gnu/libc-2.13.so
+7f50d7a36000-7f50d7a37000 rwxp 0018d000 08:01 1081601                    /lib/x86_64-linux-gnu/libc-2.13.so
+7f50d7a37000-7f50d7a3d000 rwxp 00000000 00:00 0 
+7f50d7a3d000-7f50d7a3f000 r-xp 00000000 08:01 1081659                    /lib/x86_64-linux-gnu/libdl-2.13.so
+7f50d7a3f000-7f50d7c3f000 ---p 00002000 08:01 1081659                    /lib/x86_64-linux-gnu/libdl-2.13.so
+7f50d7c3f000-7f50d7c40000 r-xp 00002000 08:01 1081659                    /lib/x86_64-linux-gnu/libdl-2.13.so
+7f50d7c40000-7f50d7c41000 rwxp 00003000 08:01 1081659                    /lib/x86_64-linux-gnu/libdl-2.13.so
+7f50d7c41000-7f50d7c59000 r-xp 00000000 08:01 1081653                    /lib/x86_64-linux-gnu/libpthread-2.13.so
+7f50d7c59000-7f50d7e59000 ---p 00018000 08:01 1081653                    /lib/x86_64-linux-gnu/libpthread-2.13.so
+7f50d7e59000-7f50d7e5a000 r-xp 00018000 08:01 1081653                    /lib/x86_64-linux-gnu/libpthread-2.13.so
+7f50d7e5a000-7f50d7e5b000 rwxp 00019000 08:01 1081653                    /lib/x86_64-linux-gnu/libpthread-2.13.so
+7f50d7e5b000-7f50d7e5f000 rwxp 00000000 00:00 0 
+7f50d7e5f000-7f50d7e80000 r-xp 00000000 08:01 1081591                    /lib/x86_64-linux-gnu/ld-2.13.so
+7f50d7ead000-7f50d7ee0000 rwxp 00000000 00:00 0 
+7f50d7ee0000-7f50d7f00000 rwxp 00000000 00:00 0 
+7f50d7f00000-7f50d7f43000 r-xs 00000000 08:01 2598011                    /var/cache/nscd/passwd
+7f50d7f43000-7f50d7f46000 rwxp 00000000 00:00 0 
+7f50d7f46000-7f50d7f4d000 r-xp 00000000 00:13 1944153310                 /afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/jre/lib/amd64/jli/libjli.so
+7f50d7f4d000-7f50d804e000 ---p 00007000 00:13 1944153310                 /afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/jre/lib/amd64/jli/libjli.so
+7f50d804e000-7f50d8050000 rwxp 00008000 00:13 1944153310                 /afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/jre/lib/amd64/jli/libjli.so
+7f50d8050000-7f50d8051000 rwxp 00000000 00:00 0 
+7f50d8073000-7f50d807b000 rwxs 00000000 08:01 32789                      /tmp/hsperfdata_rjweiss/7204
+7f50d807b000-7f50d807c000 rwxp 00000000 00:00 0 
+7f50d807c000-7f50d807d000 ---p 00000000 00:00 0 
+7f50d807d000-7f50d807f000 rwxp 00000000 00:00 0 
+7f50d807f000-7f50d8080000 r-xp 00020000 08:01 1081591                    /lib/x86_64-linux-gnu/ld-2.13.so
+7f50d8080000-7f50d8082000 rwxp 00021000 08:01 1081591                    /lib/x86_64-linux-gnu/ld-2.13.so
+7fff5e50c000-7fff5e52d000 rwxp 00000000 00:00 0                          [stack]
+7fff5e5fc000-7fff5e5fd000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Xmx3000m
+java_command: cs224n.assignments.DecoderTester -lmmodel cs224n.langmodel.EmpiricalUnigramLanguageModel -wamodel cs224n.wordaligner.ModelTwoWordAligner -lmsentences 1000 -wasentences 1000
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/pubsw/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/sbin:/sbin:/usr/games:/usr/sweet/bin:/usr/pubsw/bin:/usr/pubsw/X/bin:/afs/ir/users/r/j/rjweiss/bin:/afs/ir/users/r/j/rjweiss
+LD_LIBRARY_PATH=/afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/jre/lib/amd64/server:/afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/jre/lib/amd64:/afs/ir.stanford.edu/systems/amd64_linux26/pubsw/package/Languages/jdk-6/amd64_linux26/apps/jdk-6/jre/../lib/amd64
+SHELL=/bin/tcsh
+HOSTTYPE=x86_64-linux
+OSTYPE=linux
+MACHTYPE=x86_64
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x5f45b0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x5f45b0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x4b2c20], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x4b2c20], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x4b2c20], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x4b4e20], sa_mask[0]=0x00000000, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x4b4760], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libjvm.so+0x4b4760], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x4b4760], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTERM: [libjvm.so+0x4b4760], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR2: [libjvm.so+0x4b4e20], sa_mask[0]=0x00000000, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:squeeze/sid
+
+uname:Linux 2.6.38-11-server #48-Ubuntu SMP Fri Jul 29 19:20:32 UTC 2011 x86_64
+libc:glibc 2.13 NPTL 2.13 
+rlimit: STACK 8192k, CORE 0k, NPROC 256, NOFILE 4096, AS infinity
+load average:2.25 1.45 0.79
+
+CPU:total 1 em64t
+
+Memory: 4k page, physical 2056636k(15408k free), swap 4194300k(2255636k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (1.6.0-b105) for linux-amd64, built on Nov 29 2006 01:44:03 by "uucp" with gcc 3.2.2 (SuSE Linux)
+

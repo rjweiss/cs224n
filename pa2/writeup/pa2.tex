@@ -1,0 +1,117 @@
+\documentclass[]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{boxedminipage}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{setspace}
+
+% If you want to generate a toc for each chapter (use with book)
+\usepackage{minitoc}
+
+\usepackage{ifpdf}
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+\title{CS 224n Programming Assignment 2}
+\author{Rebecca Weiss}
+\date{}
+
+\begin{document}
+\onehalfspacing
+
+\ifpdf
+\DeclareGraphicsExtensions{.pdf, .jpg, .tif}
+\else
+\DeclareGraphicsExtensions{.eps, .jpg}
+\fi
+
+\maketitle
+
+\section{Introduction}
+
+\section{Methods}
+
+\subsection{Models}
+
+\subsubsection{Superficial Word Aligner}
+
+This model extends the BaselineWordAligner class, which is very simple.  In the BaselineWordAligner class, alignment is calculated along the diagonal; if the target sentence is longer than the source sentence, the alignment vector returns -1 for each target word beyond the source sentence.  Additionally, the train() method takes pairs of sentences, iterates through each pair, and counts all possible mappings between source and target sentence pairs.
+
+The SuperficialWordAligner class goes a little bit further than that.  I based my implementation off of the suggested alignment probability, expressed formally as:
+
+\begin{equation}
+\frac{P(f,e)}{P(f)P(e)}
+\end{equation}
+
+I calculated $P_{MLE}(F)$ and $P_{MLE}(E)$, using the getWordProbability() method from the EmpiricalUnigramLanguageModel class (modifying the LanguageModel and EmpiricalUnigramLanguageModel classes so that getWordProbability() accepted a string).  For $P(f,e)$, I modified the train() method such that 
+
+
+\subsubsection{IBM Model 1}
+
+\subsubsection{IBM Model 2}
+
+\subsection{EM Algorithm}
+
+\subsection{Decoding}
+
+\subsection{Backing off}
+
+\section{Results}
+
+\subsection{Model evaluation metrics}
+
+\subsection{Model performance}
+
+\begin{center}
+\begin{tabular}{|r|c|c|c|c|}
+\hline 
+\textbf{test} & BaselineWordAligner & SuperficialWordAligner & Model1WordAligner & Model2WordAligner \\ 
+\hline 
+\hline
+Recall & 0.225854383358 & 0.159732540861 &  &  \\ 
+\hline 
+Precision & 0.365896980461 & 0.395578365574 &  &  \\ 
+\hline 
+AER & 0.68649249583 & 0.74935321868 &  &  \\ 
+\hline 
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|r|c|c|c|c|}
+\hline 
+\textbf{validate} & BaselineWordAligner & SuperficialWordAligner & Model1WordAligner & Model2WordAligner \\ 
+\hline 
+\hline
+Recall & 0.33489096573  & 0.02366863905 &  &  \\ 
+\hline 
+Precision & 0.19822485207 & 0.31460674157 &  &  \\ 
+\hline 
+AER & 0.71224489795 & 0.91569086651 &  &  \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+\subsection{Decoding performance}
+
+\subsection{Observations}
+
+\section{Error analysis}
+
+
+\bibliographystyle{plain}
+\bibliography{}
+\end{document}

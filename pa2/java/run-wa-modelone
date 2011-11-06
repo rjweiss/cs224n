@@ -1,0 +1,10 @@
+#!/bin/sh
+
+export PATH=/usr/pubsw/bin:$PATH
+
+java -server -Xmx3000m -cp classes \
+  cs224n.assignments.WordAlignmentTester \
+  -model modelone\
+  -data test \
+  $@
+  
